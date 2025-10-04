@@ -23,11 +23,14 @@ public class Main {
     }
 
     public static void makeNewTodo() {
+        sc.nextLine();
+
         System.out.println("Введите название задачи");
         String name = sc.nextLine();
         System.out.println("Введите текст задачи");
         String text = sc.nextLine();
-        Todo newTodo = new Todo(name, text, 0);
+        int thisId = todos.size() + 1;
+        Todo newTodo = new Todo(name, text, thisId);
         System.out.println(newTodo.getName() + ": " + newTodo.getText() + ". [" + newTodo.getId() + "]");
         todos.add(newTodo);
         System.out.println("");

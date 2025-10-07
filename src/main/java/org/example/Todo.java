@@ -26,4 +26,12 @@ public class Todo {
     }
 
     boolean getStatus() {return this.status;}
+
+    public void noteStatus() {
+        if (this.getStatus() == false) {
+            this.status = true;
+        } else if(this.getStatus() == true) {
+            this.status = false;
+        }
+    }
 }

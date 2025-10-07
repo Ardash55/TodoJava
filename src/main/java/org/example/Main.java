@@ -39,7 +39,11 @@ public class Main {
     public static void showTodos() {
         System.out.println("Ваши задачи:");
         for (Todo todo : todos) {
-            System.out.println(todo.getName() + ": " + todo.getText() + ". [" + todo.getId() + "], " + todo.getStatus());
+            if (todo.getStatus() == false) {
+                System.out.println(todo.getName() + ": " + todo.getText() + ". [" + todo.getId() + "]");
+            } else if(todo.getStatus() == true) {
+                System.out.println(todo.getName() + ": " + todo.getText() + ". [" + todo.getId() + "], " + "\u2713");
+            }
         }
         System.out.println("");
     }

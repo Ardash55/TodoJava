@@ -30,7 +30,7 @@ public class Main {
         System.out.println("Введите текст задачи");
         String text = sc.nextLine();
         int thisId = todos.size() + 1;
-        Todo newTodo = new Todo(name, text, thisId);
+        Todo newTodo = new Todo(name, text, thisId, false);
         System.out.println(newTodo.getName() + ": " + newTodo.getText() + ". [" + newTodo.getId() + "]");
         todos.add(newTodo);
         System.out.println("");
@@ -39,7 +39,7 @@ public class Main {
     public static void showTodos() {
         System.out.println("Ваши задачи:");
         for (Todo todo : todos) {
-            System.out.println(todo.getName() + ": " + todo.getText() + ". [" + todo.getId() + "]");
+            System.out.println(todo.getName() + ": " + todo.getText() + ". [" + todo.getId() + "], " + todo.getStatus());
         }
         System.out.println("");
     }

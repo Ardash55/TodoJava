@@ -11,6 +11,7 @@ public class Main {
             System.out.println("1. Записать новую задачу");
             System.out.println("2. Показать задачи");
             System.out.println("3. Изменить статус задачи");
+            System.out.println("4. Изменить текст задачи");
             int action = sc.nextInt();
             switch (action) {
                 case 1:
@@ -21,6 +22,9 @@ public class Main {
                     break;
                 case 3:
                     noteStatus();
+                    break;
+                case 4:
+                    editText();
                     break;
             }
         }
@@ -65,5 +69,23 @@ public class Main {
             }
         }
         showTodos();
+    }
+
+    public static void editText() {
+        System.out.println("Выберите задачу для изменения статуса: ");
+        System.out.println("");
+        showTodos();
+        int choice = sc.nextInt();
+        for (Todo todo : todos) {
+            if (todo.getId() == choice) {
+                sc.nextLine();
+
+                System.out.println("Введите новый текст задачи");
+                String newText = sc.nextLine();
+                todo.editText(newText);
+            } else {
+
+            }
+        }
     }
 }

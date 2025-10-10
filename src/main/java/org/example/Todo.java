@@ -34,4 +34,8 @@ public class Todo {
             this.status = false;
         }
     }
+
+    public void editText(String newText) {
+        this.text = newText;
+    }
 }

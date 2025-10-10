@@ -38,4 +38,8 @@ public class Todo {
     public void editText(String newText) {
         this.text = newText;
     }
+
+    public void editName(String newName) {
+        this.name = newName;
+    }
 }
